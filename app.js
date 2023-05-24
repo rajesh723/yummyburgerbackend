@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { urlencoded } from 'express';
 import dotenv from 'dotenv';
 import { connectPassport } from './utils/Provider.js';
 import session from 'express-session';
@@ -32,7 +32,11 @@ app.use(session({
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(
+    urlencoded({
+        extended: true,
+    })
+  );
 
 app.use(cors({
    credentials:true,
