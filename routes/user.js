@@ -15,7 +15,7 @@ router.get(
 router.get(
   "/login",
   passport.authenticate("google", {
-    successRedirect: https://yummyburgerapp.vercel.app,
+    successRedirect: 'https://yummyburgerapp.vercel.app',
   })
 );
 
