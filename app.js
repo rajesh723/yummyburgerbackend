@@ -40,7 +40,7 @@ app.use(
 
 app.use(cors({
    credentials:true,
-   origin:https//yummyburgerfrontend.onrender.com,
+   origin:process.env.FRONTEND_URL,
    methods:["GET","POST","PUT","DELETE"]
 }))
 
